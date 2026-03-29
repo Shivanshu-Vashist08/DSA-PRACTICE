@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+int ProSum_Difference(int n){
+int Digit_Sum=0;
+int Digit_Product=1;
+while(n!=0){
+int rem=n%10;
+Digit_Sum+=rem;
+Digit_Product*=rem;
+n=n/10;
+}
+int ans=Digit_Product-Digit_Sum;
+return ans;
+}
+int main() {
+int n;
+cin>>n;
+cout<<"The Difference of Product and sum of digit of the number is: "<<ProSum_Difference(n)<<endl;
+    return 0;
+}
